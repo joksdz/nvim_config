@@ -54,10 +54,11 @@ end
 local cmp = require('cmp')
 cmp.setup({
   snippet = {
-    expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body) -- or luasnip if you prefer
-    end,
-  },
+expand = function(args)
+  require("luasnip").lsp_expand(args.body)
+end,
+
+     },
   mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({ select = false }),
     ['<C-Space>'] = cmp.mapping.complete(),
