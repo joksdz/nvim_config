@@ -73,8 +73,14 @@ require("lazy").setup({
 	{
   'vyfor/cord.nvim',
   build = ':Cord update',
-  -- opts = {}
-},
+opts = {
+	 text = {
+	workspace = 'In non of your bussiness ;)',
+	editing = '!file.txt',
+	viewing = 'i c btw '
+}
+
+}},
 
 	--auto_pair--
 	{
@@ -164,18 +170,8 @@ require("lazy").setup({
   end,
 },
 
-	--codeuim for auto completion--
-	{
-		'Exafunction/codeium.vim',
-      		event = 'BufEnter',
-		config = function ()
-    vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-    vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-end
-
-
-	},
+	--copilot for auto completion--
+	{'github/copilot.vim'},
 	  {'prettier/vim-prettier',
     run = 'pnpm install --frozen-lockfile --production',
     ft = {'javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'}},
