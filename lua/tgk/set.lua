@@ -10,4 +10,4 @@ vim.o.scrolloff= 8
 vim.o.updatetime = 50
 
 vim.g.mapleader = " "
-
+vim.cmd[[Copilot disable]];

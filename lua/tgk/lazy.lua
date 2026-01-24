@@ -174,6 +174,7 @@ opts = {
 	{'github/copilot.vim'},
 	  {'prettier/vim-prettier',
     run = 'pnpm install --frozen-lockfile --production',
+    
     ft = {'javascript', 'typescript', 'css', 'scss', 'json', 'graphql', 'markdown', 'vue', 'yaml', 'html'}},
 {
     'nvim-lualine/lualine.nvim',

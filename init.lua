@@ -77,4 +77,3 @@ vim.lsp.config('ts_ls', vim.tbl_deep_extend('force', {
   }
 }))
 vim.lsp.enable('ts_ls')
-
