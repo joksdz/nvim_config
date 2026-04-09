@@ -37,7 +37,7 @@ require("lazy").setup({
       ensure_installed = {
         "lua", "vim", "vimdoc", "query",
         "javascript", "typescript", "tsx",
-        "html", "css", "json","c","cpp","python","rust"},
+        "html", "css", "json","c","cpp","python","rust","nasm"},
       highlight = { enable = true },
       indent = { enable = true },
     })

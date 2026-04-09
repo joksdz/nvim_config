@@ -58,13 +58,20 @@ local servers = {
 }
 
 for _, server in ipairs(servers) do
-  -- You can add per-server tweaks here if needed
   vim.lsp.config(server, {
     on_attach = on_attach,
     capabilities = capabilities,
   })
   vim.lsp.enable(server)
 end
+
+-- asm_lsp: attach to both asm and nasm filetypes
+vim.lsp.config('asm_lsp', {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'asm', 'nasm', 'vmasm' },
+})
+vim.lsp.enable('asm_lsp')
 
 -- Example: extra settings for ts_ls (JSX)
 vim.lsp.config('ts_ls', vim.tbl_deep_extend('force', {
